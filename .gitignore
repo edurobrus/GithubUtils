@@ -1,0 +1,7 @@
+# Archivos y carpetas a ignorar
+
+# Ignorar archivos de configuración de entorno
+.env
+
+# Ignorar el entorno virtual (virtualenv)
+venv/
