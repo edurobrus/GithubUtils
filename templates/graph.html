@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gráficos de Contribuciones</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f6f8fa;
+            text-align: center;
+            margin: 20px;
+        }
+        h1 {
+            color: #24292e;
+        }
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            justify-content: center;
+            padding: 20px;
+        }
+        .graph-container {
+            background: white;
+            padding: 10px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        img {
+            max-width: 100%;
+            height: 150px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Gráficos de Contribuciones Semanales</h1>
+    <div class="grid-container">
+        {% for img in img_data_list %}
+            <div class="graph-container">
+                <h2>{{ img.username }}</h2>
+                <img src="data:image/png;base64,{{ img.img_data }}" alt="Gráfico de contribuciones de {{ img.username }}">
+            </div>
+        {% endfor %}
+    </div>
+</body>
+</html>
