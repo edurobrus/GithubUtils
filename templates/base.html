@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub Contribuciones</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Font Awesome (opcional) -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+        }
+        header nav {
+            display: flex;
+            justify-content: center;
+        }
+        header nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-size: 16px;
+        }
+        header nav a:hover {
+            text-decoration: underline;
+        }
+        .content {
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="/">Inicio</a>
+            <a href="/contributors_lines">Líneas Añadidas y Eliminadas</a>
+            <a href="/contributors_graph">Gráfico de Contribuidores</a>
+        </nav>
+    </header>
+    <div class="content">
+        {% block content %}
+        {% endblock %}
+    </div>
+</body>
+</html>

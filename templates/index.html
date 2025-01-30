@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>Bienvenido al Dashboard de Contribuciones en GitHub</h1>
+    <div>
+        <h2>Gráfico de Commits</h2>
+        <img src="data:image/png;base64,{{ bar_chart }}" alt="Gráfico de Commits por Usuario">
+        <h2>Distribución de Commits</h2>
+        <img src="data:image/png;base64,{{ pie_chart }}" alt="Gráfico de Distribución de Commits">
+    </div>
+{% endblock %}

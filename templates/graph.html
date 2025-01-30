@@ -1,9 +1,6 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gráficos de Contribuciones</title>
+{% extends 'base.html' %}
+
+{% block content %}
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -34,8 +31,6 @@
             border-radius: 5px;
         }
     </style>
-</head>
-<body>
     <h1>Gráficos de Contribuciones Semanales</h1>
     <div class="grid-container">
         {% for img in img_data_list %}
@@ -45,5 +40,4 @@
             </div>
         {% endfor %}
     </div>
-</body>
-</html>
+{% endblock %}
