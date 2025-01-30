@@ -188,8 +188,8 @@ def contributors_lines():
 
         # Agregar etiquetas con los valores de líneas añadidas y eliminadas
         for i, (add, delete) in enumerate(zip(additions, deletions)):
-            ax.text(i, add / 2, str(add), ha='center', color='white', fontsize=10, fontweight='bold')
-            ax.text(i, add + delete / 2, str(delete), ha='center', color='white', fontsize=10, fontweight='bold')
+            ax.text(i, add / 2, "+"+str(add), ha='center', color='black', fontsize=10, fontweight='bold')
+            ax.text(i, add + delete / 2 + 450, "-"+str(delete), ha='center', color='black', fontsize=10, fontweight='bold')
 
         plt.xticks(rotation=45, ha='right')
         plt.tight_layout()
